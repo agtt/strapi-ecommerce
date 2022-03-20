@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_products",
+  "info": {
+    "singularName": "order-product",
+    "pluralName": "order-products",
+    "displayName": "OrderProduct",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "price": {
+      "type": "float",
+      "default": 0
+    },
+    "quantity": {
+      "type": "integer",
+      "default": 0
+    },
+    "order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order"
+    }
+  }
+}
